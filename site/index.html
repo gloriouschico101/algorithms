@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Callum Coburn</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Callum Coburn</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#lists" class="nav-link">Lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#arrays" class="nav-link">Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#linked-lists" class="nav-link">Linked Lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#stack" class="nav-link">Stack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#queues" class="nav-link">Queues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#trees" class="nav-link">Trees</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#graphs" class="nav-link">Graphs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sets" class="nav-link">Sets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#hash-tables" class="nav-link">Hash tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="lists">Lists</h2>
+<p>A list data structure is a collection data type that allows multiple values to be stored within the same field. Lists are stored in certain chunks of memory which are linked together with pointers, that allows
+efficient use of memory and doesn't require resizing.</p>
+<p><code>"apple"</code>, <code>"orange"</code>, <code>"carrot"</code> and <code>"pear"</code> are being stored in a list named <code>foods</code> and the list gets printed out.
+It then adds <code>"chocolate"</code> and <code>"cake"</code> to the list, which automatically changes the size of the list. Then prints the list out</p>
+<pre><code>foods = ["apple", "orange", "carrot", "pear"]
+
+for i in foods:
+    print(i)
+
+print("")
+print("")
+
+foods.append("chocolate")
+foods.append("cake")
+
+for i in foods:
+    print(i)
+</code></pre>
+<h2 id="arrays">Arrays</h2>
+<p>An array data structure is a data structure that is a fixed size, can be dynamically reallocated, and is efficiently indexed.
+It stores multiple items of the same type together, which makes it easier to calculate the position of each element.
+It can not store different types such as integers and floats in one array.</p>
+<p>We first have to import array as it is before we can use arrays.
+<code>1</code>, <code>2</code>, <code>3</code> and <code>4</code> are integer numbers and are being stored into an integer array named <code>int_array</code> and then gets printed out.
+<code>1.1</code>, <code>2.2</code>, <code>3.3</code> and <code>4.4</code> are float numbers, that are being stored into a float array named <code>float_array</code> and then gets printed out.
+The <code>'i'</code> in the <code>int_array</code> indicates that it is an integer array and only integer numbers can be put into the array.
+The <code>'f'</code> in the <code>float_array</code> indicates that it is a float array and only float numbers can be put into the array</p>
+<pre><code>import array
+
+int_array = array.array('i', [1, 2, 3, 4])
+float_array = array.array('f', [1.1, 2.2, 3.3, 4.4])
+
+for i in int_array:
+    print(i)
+
+for a in float_array:
+    print(a)
+</code></pre>
+<h2 id="linked-lists">Linked Lists</h2>
+<p>Linked lists are an ordered collection of objects. Linked lists are different from lists because of the way they store elements in memory.
+While lists use a contiguous memory block to store references to their data, linked lists store references as a part of their own element.
+A linked list is a collection of nodes, where the first node is the <code>head</code>, and is used as the starting point for any iteration through the list.
+The last node must have its <code>next</code> reference pointing to None to detemine the end of the list.</p>
+<p>Each element of a linked list is called a <code>node</code> where every node has two different fields:
+<code>Data</code> - The value to be stored in the node
+<code>Next</code> - A reference to the next node on the list.</p>
+<p>So first we create the <code>Node</code> class and a class that uses the Node class called <code>Slinkedlist</code>. We then give the values to the node that goes to the <code>Next</code> data element.</p>
+<pre><code>class Node:
+def __init__(self, data=None):
+    self.data = data
+    self.next = None
+
+
+class SLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def listprint(self):
+        printval = self.head
+        while printval is not None:
+            print(printval.dataval)
+            printval = printval.nextval
+
+
+Slist = SLinkedList()
+Slist.head = Node("Mon")
+element2 = Node("Tue")
+element3 = Node("Wed")
+
+Slist.head.next = element2
+
+element2.next = element3
+
+Slist.listprint()
+</code></pre>
+<h2 id="stack">Stack</h2>
+<p>A stack is a linear data structure that stores items in a LIFO (Last-In/First-Out) way. So the last element you add to the stack, will be the first element to come off the stack.
+The insert and delete operations are usually called push and pop.</p>
+<p>We have 3 elements being added to the stack: <code>1</code>, <code>2</code> and <code>3</code>. Because <code>3</code> was added on last, the first pop will remove <code>3</code> from the stack, then remove <code>2</code>, and then finally <code>1</code>.</p>
+<pre><code>stack = []
+
+stack.append(1)
+stack.append(2)
+stack.append(3)
+
+print("First stack")
+print(stack)
+
+print("Popped from stack:")
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+
+print("Stack after the pops")
+print(stack)
+</code></pre>
+<h2 id="queues">Queues</h2>
+<p>Queues are like stacks in the fact that they are a linear data structure. However, they store items in FIFO (First-In/First-Out) way. So the first element to be added to the stack, will be the first
+element to come off the stack.</p>
+<p>We have 3 elements being added to the queue: <code>1</code>, <code>2</code> and <code>3</code>. Because <code>1</code> was added on first, the first pop will remove <code>1</code> from the stack, then remove <code>2</code>, and then finally <code>3</code>.</p>
+<pre><code>queue = []
+
+queue.append(1)
+queue.append(2)
+queue.append(3)
+
+print("First queue")
+print(queue)
+
+print("Dequeued from queue")
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
+
+print("Queue after the dequeing")
+print(queue)
+</code></pre>
+<h2 id="trees">Trees</h2>
+<p>A tree data structure is where data elements are connected using references in a hierarchical manner. A tree consists of a root node, which is the top of the tree.</p>
+<p><code>Root Node</code> - The topmost node of a tree. It's always the first node created when creating the tree. In the tree below, <code>50</code> would be the root node.</p>
+<p><code>Parent Node</code> - The parent of any node is the node which is above the current node. With the tree below, <code>20</code> would be the parent of <code>11</code>, <code>46</code> and <code>15</code>. <code>50</code> is the root but also the parent node of
+<code>20</code> and <code>45</code>.</p>
+<p><code>Child Node</code> - The child node is the node below the parent. The tree below, <code>30</code> and <code>78</code> are child nodes of the parent node <code>45</code>.</p>
+<p><code>Edge</code> - The edge is the reference which a parent node is connected to a child node. It's like a path from the parent node to child node.</p>
+<p><code>Leaf Node</code> - The leaf node is the last node that doesn't have a child. With the tree below, <code>11</code>, <code>46</code>, <code>15</code>, <code>30</code> and <code>78</code> are all leaf nodes.</p>
+<p><code>Internal Nodes</code> - They are nodes that have atleast one child node. Examples with the tree below, <code>50</code>, <code>20</code> and <code>45</code> are internal nodes.</p>
+<p><img alt="Image title" loading="lazy" src="https://www.pythonforbeginners.com/wp-content/uploads/tree1.png" /></p>
+<h2 id="graphs">Graphs</h2>
+<p>Graphs are complex, non-linear data structures that are made by a group of vertices, connected by edges.</p>
+<p><code>Vertices</code> - Vertices are what's in a graph. Every vertex has a value that is associated with it. An example would be a list of houses using a graph, the vertices would represent the houses.
+<code>Edges</code> - Edges is the relationship between the vertices in the graph. Edges may or may not have a vlue associated with them. An example would be a list of towns using a graph, the edges would be the
+road between the houses.</p>
+<p>Here we have a graph that has 3 vertices. The cost of moving from vertex 0 to vertex 1 is 1. Where as the cost of moving from vertex 0 to vertex 2 is 2.
+When moving from a vertex to itself, it is usually 0.</p>
+<pre><code>graph = [[0, 1, 2],
+         [2, 0, 5],
+         [4, 5, 0]]
+</code></pre>
+<h2 id="sets">Sets</h2>
+<p>A set data structure is an unordered collection of items. Every element is unique meaning there cannot be duplicates of an element, and cannot be changed.
+However, you can add or remove items from it.
+A set is created by placing all the elements inside curly braces <code>{}</code>, seperated by comma.</p>
+<p>Here, we have a set of values <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>3</code> and <code>2</code>. However, after the <code>4</code>, the <code>3</code> and <code>2</code> are not added as they are duplicates.
+So we get an output of <code>{1, 2, 3, 4}</code></p>
+<pre><code>my_set = {1, 2, 3, 4, 3, 2}
+print(my_set)
+</code></pre>
+<h2 id="hash-tables">Hash tables</h2>
+<p>Hash tables are a type of data structure that the index value of the data element is generated from a hash function. This makes accessing data faster as the index value is like a key for the data value.
+In Python, the Dictionary data types represent the implementation of hash tables.</p>
+<p>Here, we have 3 keys:
+<code>Name</code> - With the data value: <code>Callum</code>
+<code>Age</code> - With the data value: <code>20</code>
+<code>Class</code> - With the data value: <code>Programming</code></p>
+<p>We can then print out the <code>Name</code> and <code>Age</code> by using the key.</p>
+<pre><code>dict = {'Name': 'Callum', 'Age': '20', 'Class': 'Programming'}
+
+print("Name: ", dict['Name'])
+print("Age: ", dict['Age'])
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.4.0
+Build Date UTC : 2022-11-11 07:13:19.370056+00:00
+-->
